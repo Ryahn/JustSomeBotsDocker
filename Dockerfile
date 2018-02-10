@@ -16,7 +16,7 @@ ADD . /musicbot
 WORKDIR /musicbot
 
 RUN git clone https://github.com/Just-Some-Bots/MusicBot.git ~/musicbot -b master \
-    && cd ~/musicbot
+    && cd ~/musicbot \
     && python3.5 -m pip install -U pip \
     && python3.5 -m pip install -U -r requirements.txt
 
