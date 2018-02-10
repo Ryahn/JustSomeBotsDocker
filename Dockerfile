@@ -16,11 +16,9 @@ RUN echo "Upgrading" && apt-get upgrade -y
 
 ADD . /musicbot
 WORKDIR /musicbot
-
-RUN cd ~/musicbot \
-    && python3.5 -m pip install -U pip \
-    && python3.5 -m pip install -U -r requirements.txt
-
 VOLUME /musicbot/config
 
+RUN python3.5 -m pip install -U pip \
+    && python3.5 -m pip install -U -r requirements.txt
+    
 CMD python3.5 run.py
