@@ -4,7 +4,7 @@ MAINTAINER Ryahn, https://github.com/Just-Some-Bots/MusicBot
 
 RUN echo "Updating" && apt-get update
 RUN echo "Installing software-properties-common" && apt-get install software-properties-common -y
-RUN echo "Adding ppa:fkrull/deadsnakes" && add-apt-repository ppa:fkrull/deadsnakes -y
+RUN echo "Adding ppa:deadsnakes" && add-apt-repository ppa:deadsnakes -y
 RUN echo "Adding ppa:mc3man/trusty-media" && add-apt-repository ppa:mc3man/trusty-media -y
 RUN echo "Adding ppa:chris-lea/libsodium" && add-apt-repository ppa:chris-lea/libsodium -y
 RUN echo "Updating" && apt-get update -y
