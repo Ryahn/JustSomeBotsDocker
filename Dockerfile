@@ -17,8 +17,7 @@ RUN echo "Upgrading" && apt-get upgrade -y
 ADD . /musicbot
 WORKDIR /musicbot
 
-RUN git clone https://github.com/Just-Some-Bots/MusicBot.git ~/musicbot -b master \
-    && cd ~/musicbot \
+RUN cd ~/musicbot \
     && python3.5 -m pip install -U pip \
     && python3.5 -m pip install -U -r requirements.txt
 
