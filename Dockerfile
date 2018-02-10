@@ -2,15 +2,15 @@ FROM ubuntu:16.04
 
 MAINTAINER Ryahn, https://github.com/Just-Some-Bots/MusicBot
 
-RUN apt update \
-    && apt install software-properties-common -y \
+RUN apt-get update \
+    && apt-get install software-properties-common -y \
     && add-apt-repository ppa:fkrull/deadsnakes -y \
     && add-apt-repository ppa:mc3man/trusty-media -y \
     && add-apt-repository ppa:chris-lea/libsodium -y \
-    && apt update -y \
-    && apt install build-essential unzip -y \
-    && apt install python python3.5-dev ffmpeg libopus-dev libffi-dev git libav-tools libsodium-dev python3-pip -y \
-    && apt upgrade -y
+    && apt-get update -y \
+    && apt-get install build-essential unzip -y \
+    && apt-get install python python3.5-dev ffmpeg libopus-dev libffi-dev git libav-tools libsodium-dev python3-pip -y \
+    && apt-get upgrade -y
 
 ADD . /musicbot
 WORKDIR /musicbot
